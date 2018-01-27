@@ -8,7 +8,7 @@ A combination of a Chrome extension and a MacOS AppleScript application which to
 
 * Install the extension in Chrome.
 
-* Using Finder, move `PRDiff.app` to another folder, and then back to its original location.  Then launch `PRDiff.app` and dismiss the dialog box that appears.  These steps should help ensure that `PRDiff.app` is registered to handle URLs with protocol `prdiff://`.
+* Using Finder, move `PRDiff.app` to another folder (after that you may move it back to its original location if you wish).  Then launch `PRDiff.app` and dismiss the dialog box that appears.  These steps should help ensure that `PRDiff.app` is registered to handle URLs with protocol `prdiff://`.
 
   * To test the protocol registration, enter the following in a terminal:
 
