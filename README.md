@@ -24,11 +24,11 @@ A combination of a Chrome extension and a MacOS AppleScript application which to
   git config --global diff.tool bc3
   ```
 
-* Create a new XML plist file at `~/.pr-repos.plist`.  Each plist item should be of one of the following types.  When looking up a specific <user> and <repo>, items of each type are consulted in the following order:
+* Create a new XML plist file at `~/.pr-repos.plist`.  Each plist item should be of one of the following types.  When looking up a specific *user* and *repo*, items of each type are consulted in the following order:
 
-  * An item with the name "<user>/<repo>".  The value is the exact directory for the repo.
-  * An item with the name "<repo>".  The value is the exact directory for any repo with that name.
-  * An item with the name "<user>/*".  The value is the base directory for any repo under that user.
+  * An item with the name "*user*/*repo*".  The value is the exact directory for the repo.
+  * An item with the name "*repo*".  The value is the exact directory for any repo with that name.
+  * An item with the name "*user*/*".  The value is the base directory for any repo under that user.
   * An item with the name "*".  The value is the base directory for any repo.
 
 * Navigate to a PR on github.com and then press the browser extension icon labeled "Launch 'diff tool'".  A dialog will comfirm the repo and branch details before launching your registered diff client.
@@ -47,4 +47,4 @@ A combination of a Chrome extension and a MacOS AppleScript application which to
 * The app finds the local directory of the repo according to the rules in `~/.pr-repos.plist` and uses a shell script to invoke `git difftool`.
   * The `—dir-diff` option invokes the diff tool once for all files.
   * The `—no-symlinks` creates real file copies to diff rather than symlinks.
-  * The diff range is specified as "master...origin/<branch>".  This uses the same mechanism as `git merge-base` to find the most recent merge from master into the PR branch.  Diffing the PR branch head with the merge base is a close approximation of the actual result of merging the PR.
+  * The diff range is specified as "master...origin/*branch*".  This uses the same mechanism as `git merge-base` to find the most recent merge from master into the PR branch.  Diffing the PR branch head with the merge base is a close approximation of the actual result of merging the PR.
