@@ -2,9 +2,14 @@
 
 A combination of a Chrome extension and a MacOS AppleScript application which together enable launching of an external diff client directly from a GitHub PR page.
 
+# Build
+
+* `cd app; make`
+* Output is `out/PRDiff.app`
+
 # Installation
 
-* `git clone` this repository.
+* `git clone` this repository and build.
 
 * Install the extension in Chrome.
 
